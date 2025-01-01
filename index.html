@@ -121,15 +121,16 @@
         };
 
         setInterval(createFirework, 500);
-    </script>
-          <!-- Google tag (gtag.js) -->
-<script async src="https://sites.google.com/view/me-class12acc"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-WST2GMLFY1');
-</script>
+        // Auto voice saying "Happy New Year"
+        const speakHappyNewYear = () => {
+            const msg = new SpeechSynthesisUtterance("Happy New Year 2025");
+            msg.lang = "en-US";
+            window.speechSynthesis.speak(msg);
+        };
+
+        // Speak message when the page loads
+        window.onload = speakHappyNewYear;
+    </script>
 </body>
 </html>
