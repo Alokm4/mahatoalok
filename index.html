@@ -108,10 +108,10 @@
         const createFirework = () => {
             const firework = document.createElement('div');
             firework.classList.add('firework');
-            firework.style.left = `${Math.random() * 100}vw`;
-            firework.style.top = `${Math.random() * 100}vh`;
-            firework.style.setProperty('--tx', `${(Math.random() - 0.5) * 200}px`);
-            firework.style.setProperty('--ty', `${(Math.random() - 0.5) * 200}px`);
+            firework.style.left = ${Math.random() * 100}vw;
+            firework.style.top = ${Math.random() * 100}vh;
+            firework.style.setProperty('--tx', ${(Math.random() - 0.5) * 200}px);
+            firework.style.setProperty('--ty', ${(Math.random() - 0.5) * 200}px);
 
             document.body.appendChild(firework);
 
@@ -121,16 +121,7 @@
         };
 
         setInterval(createFirework, 500);
-
-        // Auto voice saying "Happy New Year"
-        const speakHappyNewYear = () => {
-            const msg = new SpeechSynthesisUtterance("Happy New Year 2025");
-            msg.lang = "en-US";
-            window.speechSynthesis.speak(msg);
-        };
-
-        // Speak message when the page loads
-        window.onload = speakHappyNewYear;
     </script>
+   
 </body>
 </html>
